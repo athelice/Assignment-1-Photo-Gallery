@@ -11,8 +11,9 @@
     <Grid>
 
         <Grid HorizontalAlignment="Left" Height="365" Margin="364,235,0,0" VerticalAlignment="Top" Width="708">
-            <Button x:Name="Add_Image" Content="Add Image" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click" Height="130" Width="158"/>
-            <Button Content="Thumbnail" HorizontalAlignment="Left" Margin="233,12,0,0" VerticalAlignment="Top" Height="128" Width="155" Click="Button_Click_1"/>
+            <Button x:Name="Add_Image" Content="Add Image" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="AddImage_Click" Height="130" Width="158"/>
+            <Button Name ="Thumbnail" Content="Thumbnail" HorizontalAlignment="Left" Margin="233,12,0,0" VerticalAlignment="Top" Height="128" Width="155" Click="Button_Click_1"/>
+           
         </Grid>
         <TextBlock HorizontalAlignment="Left" Margin="555,53,0,0" Text="Image Library" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="350" SelectionChanged="TextBlock_SelectionChanged" FontSize="50" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="641,148,0,0" Text="Welcome! Add an image!" TextWrapping="Wrap" VerticalAlignment="Top"/>
