@@ -17,6 +17,7 @@ using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Text;
+using Windows.Storage.FileProperties;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -42,35 +43,58 @@ namespace PictureApp
         private async void AddImage_Click(object sender, RoutedEventArgs e)
         {
             //trigger dialogue box to enable the user to select an image
+
+            var picker = new FileOpenPicker();
+
+            //WHen the Browse dialog opens show files in List mode
+            picker.ViewMode = PickerViewMode.List;
+
+            //Start location for browsing
+            picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+            picker.FileTypeFilter.Add(".bmp");
+
+
+            //pick multiple files and store in files
+
+            var files = await picker.PickMultipleFilesAsync();
+            List<ImageItem> ImageList = new List<ImageItem>();
+            StringBuilder output = new StringBuilder("Picked Files: \n");
+            if (files.Count > 0)
             {
-                var picker = new FileOpenPicker();
+                for (int i = 0; i < files.Count; i++)
+                {
+                    using (IRandomAccessStream filestream = await files[i].OpenAsync(FileAccessMode.Read))
+                    {
+                        ThumbnailMode thumbnailMode = ThumbnailMode.PicturesView;
+                        ThumbnailOptions thumbnailOptions = ThumbnailOptions.UseCurrentScale;
+                        uint resize = 400;
+                        BitmapImage bitmapImage = new BitmapImage();
+                        StorageItemThumbnail thumb = await files[i].GetThumbnailAsync(thumbnailMode, resize, thumbnailOptions);
+                        await bitmapImage.SetSourceAsync(filestream);
+                        bitmapImage.SetSource(thumb);
+                        ImageList.Add(new ImageItem() { ImageData = bitmapImage, ImageName = files[i].Name });
 
-                //WHen the Browse dialog opens show files in List mode
-                picker.ViewMode = PickerViewMode.List;
+                    }
 
-                //Start location for browsing
-                picker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
-                picker.FileTypeFilter.Add(".jpg");
-                picker.FileTypeFilter.Add(".jpeg");
-                picker.FileTypeFilter.Add(".png");
-                picker.FileTypeFilter.Add(".bmp");
 
-                //StorageFile file = await picker.PickSingleFileAsync();
-                //pick multiple files and store in files
-                var files = await picker.PickMultipleFilesAsync();
-            
+                }
 
             }
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
+            public void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+            {
 
-        }
+            }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(ImagePage));
+            private void Button_Click_1(object sender, RoutedEventArgs e)
+            {
+                Frame.Navigate(typeof(ImagePage));
+            }
         }
     }
-}
+
+

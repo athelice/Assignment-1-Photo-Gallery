@@ -1,1 +1,1 @@
-C:\KalAcademy\PictureApp\PictureApp\PictureApp.csproj;x86
+C:\Users\Kirti\Kal Projects\GitHub\PictureApp\PictureApp.csproj;x86
