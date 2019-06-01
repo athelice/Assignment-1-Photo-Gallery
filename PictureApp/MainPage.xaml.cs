@@ -55,12 +55,14 @@ namespace PictureApp
             picker.FileTypeFilter.Add(".jpeg");
             picker.FileTypeFilter.Add(".png");
             picker.FileTypeFilter.Add(".bmp");
+            picker.FileTypeFilter.Add(".gif");
 
 
             //pick multiple files and store in files
 
             var files = await picker.PickMultipleFilesAsync();
             List<ImageItem> ImageList = new List<ImageItem>();
+           
             StringBuilder output = new StringBuilder("Picked Files: \n");
             if (files.Count > 0)
             {
