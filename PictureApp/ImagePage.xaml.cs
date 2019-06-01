@@ -31,5 +31,10 @@ namespace PictureApp
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void FlipView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

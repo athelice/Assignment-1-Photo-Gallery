@@ -1,1 +1,1 @@
-C:\KalAcademy\PictureApp\PictureApp\PictureApp.csproj;x86
+C:\Users\athel\source\repos\Assignment-1-Photo-Gallery\PictureApp\PictureApp.csproj;x86
