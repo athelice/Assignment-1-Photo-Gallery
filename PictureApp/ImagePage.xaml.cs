@@ -26,15 +26,19 @@ namespace PictureApp
         {
             this.InitializeComponent();
         }
+         protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+            ImageItem displayitem = e.Parameter as ImageItem;
+            DisplayImage.Source = displayitem.ImageData;
+            base.OnNavigatedTo(e);
+
+        }
+        public void Button_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
         }
 
-        private void FlipView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+      
     }
 }

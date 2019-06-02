@@ -17,6 +17,7 @@ using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
 using Windows.UI.Xaml.Media.Imaging;
 using System.Text;
+
 using Windows.Storage.FileProperties;
 
 
@@ -27,20 +28,23 @@ namespace PictureApp
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPage : Page
-
-    {
-        public class ImageItem
+    
+ public class ImageItem
         {
             public BitmapImage ImageData { get; set; }
             public string ImageName { get; set; }
-        }
+}
+
+public sealed partial class MainPage : Page
+
+    {
+       
         public MainPage()
         {
             this.InitializeComponent();
         }
-
-        private async void AddImage_Click(object sender, RoutedEventArgs e)
+       
+        public async void AddImage_Click(object sender, RoutedEventArgs e)
         {
             //trigger dialogue box to enable the user to select an image
 
@@ -83,20 +87,17 @@ namespace PictureApp
 
 
                 }
+                PhotoAlbum.ItemsSource = ImageList;
 
             }
         }
 
-            public void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-            {
-
-            }
-
-            private void Button_Click_1(object sender, RoutedEventArgs e)
-            {
-                Frame.Navigate(typeof(ImagePage));
-            }
+        public void PhotoAlbum_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Frame.Navigate(typeof(ImagePage),e.ClickedItem);
         }
+
     }
+}
 
 
