@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-06-01T23:17:06.834</Modified>
+      <Modified>2019-06-02T00:05:51.114</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\PictureApp.exe">
       <PackagePath>entrypoint\PictureApp.exe</PackagePath>
-      <Modified>2019-06-01T23:17:05.651</Modified>
+      <Modified>2019-06-02T00:05:50.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.8\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -86,19 +86,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\PictureApp.xr.xml">
       <PackagePath>PictureApp.xr.xml</PackagePath>
-      <Modified>2019-06-01T21:30:15.746</Modified>
+      <Modified>2019-06-01T23:57:54.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-06-01T23:17:05.147</Modified>
+      <Modified>2019-06-02T00:05:50.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\ImagePage.xbf">
       <PackagePath>ImagePage.xbf</PackagePath>
-      <Modified>2019-06-01T23:17:05.149</Modified>
+      <Modified>2019-06-02T00:05:50.332</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-06-01T23:17:05.149</Modified>
+      <Modified>2019-06-02T00:05:50.333</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -106,11 +106,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-06-01T21:30:16.974</Modified>
+      <Modified>2019-06-02T00:02:32.862</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Kirti\Kal Projects\GitHub\PictureApp\bin\x86\Debug\Core\PictureApp.exe">
       <PackagePath>PictureApp.exe</PackagePath>
-      <Modified>2019-06-01T23:17:06.775</Modified>
+      <Modified>2019-06-02T00:05:51.089</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
